@@ -17,6 +17,7 @@ function Project(){
                         height:600px;
                         position:relative;
                         text-align: left;
+                        padding:10px;
                     }
                     .project-box{
                         display:flex;
@@ -45,11 +46,11 @@ function Project(){
                         line-height:1.6;
                         margin-bottom:40px;
                     }
-                    .box-right-text p a{    
+                    .box-right-text a{    
                         color:#39f;
                         font-size:18px;
                     }
-                    .box-right-text p a:hover{    
+                    .box-right-text a:hover{    
                         color:#1763af;
                     }
                     #project .box-left img{
@@ -145,6 +146,55 @@ function Project(){
                     .more:hover a {
                         color: white; /* Text color changes to white on hover */
                     }
+                    @media(max-width:768px){
+                        .box-right-text {
+                            padding: 10px 30px;
+                        }
+                    }
+                    @media(max-width:568px){
+                        
+                        #project .box-left{
+                            flex:1 1 95%;
+                            position:relative;
+                        }
+
+                        #project .box-right{
+                            flex:1 1 95%;
+                            margin-top:0px;
+                        }
+                        
+                        .box-right-text{
+                            padding:10px;
+                            text-align:center;
+                        }
+                        .box-right-text p{
+                            padding:10px;
+                            text-align:left;
+                        }
+                        .overlay-project-number{
+                            position: absolute;
+                            bottom: -30px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                        }
+                        .overlay-project {
+                            position: absolute;
+                            bottom: 0%;
+                            right: 0;
+                            top:auto;
+                            left:auto;
+                            z-index: 3;
+                        }
+                        .overlay-head {
+                            padding: 10px 15px;
+                        }
+                        .overlay-head span:nth-child(1) {
+                            font-size: 22px;
+                        }
+                        .overlay-head span:nth-child(2) {
+                            font-size: 16px;
+                        }
+                    }
 
                 `
             }
@@ -170,7 +220,7 @@ function Project(){
                             <div className="box-right">
                                 <div className='box-right-text'>
                                     <p>Amidst the cacophony of life, there is a serene Grove. A Grove of Jade that’s rooted deep. That holds a community together. A Grove that connects you with your own world. Where all the like-minded people coexist. It’s time you discover this rarity at the heart of your city and inhabit a space acclaimed by your close ones.</p>
-                                    <p><a href="">Visit Project</a></p>
+                                    <a href="">Visit Project</a>
                                 </div>
                             </div>
                         </div>

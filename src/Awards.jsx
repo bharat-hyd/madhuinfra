@@ -30,6 +30,12 @@ function Awards(){
                     font-size:15px;
                     padding:0px 20px;
                 }
+                @media(max-width:568px){
+                    
+                .awards-box{
+                    flex:1 1 calc(46% - 22px);
+                }
+                }
                 `
             }
         </style>

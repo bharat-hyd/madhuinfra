@@ -8,17 +8,23 @@ import Awards from './Awards'
 import Blog from './Blog'
 import Update from './Update'
 import Hero from './Hero'
+import Footer from './Footer'
+import Navbar from './Navbar'
+import Review from './Review'
 
 function App() {
 
   return (
     <>
-      <Hero />
+      <Navbar />
+      {/* <Hero /> */}
       <Project />
       <Journey />
       <Awards />
+      <Review />
       <Blog />
       <Update />
+      <Footer />
     </>
   )
 }

@@ -61,6 +61,23 @@ function Journey(){
                     display:block;
                     line-height:1.8;
                 }
+                @media(max-width:568px){
+                    
+                    .journey-box{
+                        flex:1 1 40%;
+                    }
+                      .journey-box:nth-child(3n),
+                        .journey-box:nth-last-child(-n+3) {
+                            border-right: 1px solid #ccc;
+                            border-bottom: 1px solid #ccc;
+                        }
+                    .journey-box:nth-child(2n) {
+                        border-right: none; /* remove right border for every 2nd box */
+                    }
+                    .journey-box:nth-last-child(-n+2) {
+                        border-bottom: none; /* remove right border for every 2nd box */
+                    }
+                }
                 `
             }
         </style>

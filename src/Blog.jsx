@@ -7,6 +7,9 @@ function Blog(){
         <style>
             {
                 `
+                 #blog{
+                        padding:60px 10px;
+                    }
                 .blog-list{
                     display:flex;
                     flex-wrap:wrap;
@@ -60,12 +63,50 @@ function Blog(){
                 .blog-box:hover:after {
                     opacity:1;
                 }
+                .heading-box{
+                    position:relative;
+                    display:inline-block;
+                }
+                .head-overlay{
+                    position:absolute;
+                    top:0;
+                    left:0;
+                    width:0;
+                    height:100%;
+                    background:red;
+                    z-index:3;
+                    animation:sweep 0.9s ease forwards;
+                }
+                @keyframes sweep{
+                    0%{
+                        left:0;
+                        width:0%
+                    }
+                    50%{
+                        left:0;
+                        width:100%
+                    }
+                    100%{
+                        width:0%;
+                        left:100%;
+                    
+                    }
+                }
+                @media(max-width:568px){
+                
+                .blog-box{
+                    flex:1 1 calc(95.33% - 75px);
+                }
+                }
                 `
             }
         </style>
         <section id="blog">
             <div className="container">
-                <h3 className="heading">Blog & Updates</h3>
+                <div className='heading-box'>
+                    <h3 className="heading">Blog & Updates</h3>
+                    <div className='head-overlay'></div>
+                </div>
                 <div className="blog-list">
                     <div className="blog-box">
                         <div className='blog-box-img'>
