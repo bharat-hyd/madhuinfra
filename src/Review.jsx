@@ -126,6 +126,23 @@ function Review() {
                 margin-top: -40px;
             }
         }
+        @media(max-width:568px){
+            .slider-wrapper {
+                height: 400px;
+            }
+            .review-box {
+                width: 95%;
+                margin-top: 0px;
+            }
+            
+        .slide.active{
+          left:0%;
+          width:100%;
+          height:100%;
+          opacity:1;
+          z-index:2;
+        }
+        }
       `}</style>
 
       <section id="review">
