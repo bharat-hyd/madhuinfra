@@ -280,6 +280,7 @@ const toggleMenu = () => {
                     z-index:2;
                     color:white;
                     text-align:center;
+                    width:100%;
                 }
                 
                 .hero-overlay h1{
@@ -288,6 +289,7 @@ const toggleMenu = () => {
                     line-height:2.5;
                     border-top:1px solid #ccc;
                     border-bottom:1px solid #ccc;
+                    display:inline-block;
                 }
                 .hero-overlay .num{
                     color:#f90;
