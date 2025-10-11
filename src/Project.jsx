@@ -1,6 +1,43 @@
+import { useEffect, useState } from 'react'
 import project_1 from './assets/project_1.jpg'
+import project_2 from './assets/project_2.png'
 function Project(){
-    return(
+    const projects = [
+        {
+            title:"PS Logistics Park",
+            subtitle:"Kona Expressway",
+            price:"3.59 Cr onwards",
+            para:"Amidst the cacophony of life, there is a serene Grove. A Grove of Jade that’s rooted deep. That holds a community together. A Grove that connects you with your own world. Where all the like-minded people coexist. It’s time you discover this rarity at the heart of your city and inhabit a space acclaimed by your close ones.",
+            url:"ps-logistics-park",
+            img:project_1,
+        },
+        {
+            title:"PS Logistics 2",
+            subtitle:"Kona Expressway 2",
+            price:"3.59 Cr onwards 2",
+            para:"2 Amidst the cacophony of life, there is a serene Grove. A Grove of Jade that’s rooted deep. That holds a community together. A Grove that connects you with your own world. Where all the like-minded people coexist. It’s time you discover this rarity at the heart of your city and inhabit a space acclaimed by your close ones.",
+            url:"2 ps-logistics-park",
+            img:project_2,
+        },
+        {
+            title:"PS Logistics 3",
+            subtitle:"Kona Expressway 2",
+            price:"3.59 Cr onwards 2",
+            para:"2 Amidst the cacophony of life, there is a serene Grove. A Grove of Jade that’s rooted deep. That holds a community together. A Grove that connects you with your own world. Where all the like-minded people coexist. It’s time you discover this rarity at the heart of your city and inhabit a space acclaimed by your close ones.",
+            url:"2 ps-logistics-park",
+            img:project_2,
+        },
+    ]
+    const [projectIndex, setProjectIndex] = useState(0)
+    const visibleProject = 1
+    const projectSlideWidth = 100 / visibleProject;
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setProjectIndex((prev) =>  prev === projects.length - 1 ? 0 : prev + 1)
+        },3000)
+        return () => clearInterval(timer)
+    },[])
+    return( 
         <>
         <style>
             {
@@ -13,13 +50,16 @@ function Project(){
                     }
                     .project-list{
                         display:flex;
-                        flex:wrap;
+                        flex-wrap:nowrap;
+                        overflow: hidden;      /* hides extra boxes */
+                        width: 100%;    
                         height:600px;
                         position:relative;
                         text-align: left;
-                        padding:10px;
+                        flex-direction:row;
                     }
                     .project-box{
+                        flex:0 0 100%;
                         display:flex;
                         flex-wrap:wrap;
                         height:100%;
@@ -204,26 +244,28 @@ function Project(){
                     <h3 className="heading showAnimation">Featured Projects</h3>
                     <p className="subheading">Building dreams since 1985</p>
                     <div className="project-list">
-                        <div className="project-box">
-                            <div className="box-left">
-                                <img src={project_1} alt="" />
-                                <div className="overlay-project">
-                                    <div className="overlay-head">
-                                        <span>PS Logistics Park </span>
-                                        <span>Kona Expressway</span>
+                        {projects.map((project, index) => (
+                            <div className="project-box" key={index} style={{ transform:`translateX(-${projectIndex * projectSlideWidth}%)`,transition: 'transform 0.8s ease'}}>
+                                <div className="box-left">
+                                    <img src={project_1} alt="" />
+                                    <div className="overlay-project">
+                                        <div className="overlay-head">
+                                            <span>{project.title} </span>
+                                            <span>Kona Expressway</span>
+                                        </div>
+                                        <div className="overlay-subhead">
+                                            3.59 Cr onwards
+                                        </div>
                                     </div>
-                                    <div className="overlay-subhead">
-                                        3.59 Cr onwards
+                                </div>
+                                <div className="box-right">
+                                    <div className='box-right-text'>
+                                        <p>Amidst the cacophony of life, there is a serene Grove. A Grove of Jade that’s rooted deep. That holds a community together. A Grove that connects you with your own world. Where all the like-minded people coexist. It’s time you discover this rarity at the heart of your city and inhabit a space acclaimed by your close ones.</p>
+                                        <a href="">Visit Project</a>
                                     </div>
                                 </div>
                             </div>
-                            <div className="box-right">
-                                <div className='box-right-text'>
-                                    <p>Amidst the cacophony of life, there is a serene Grove. A Grove of Jade that’s rooted deep. That holds a community together. A Grove that connects you with your own world. Where all the like-minded people coexist. It’s time you discover this rarity at the heart of your city and inhabit a space acclaimed by your close ones.</p>
-                                    <a href="">Visit Project</a>
-                                </div>
-                            </div>
-                        </div>
+                        ))}
                         <div className='overlay-project-number'>
                             <a href="">1</a>
                             <a href="">2</a>
