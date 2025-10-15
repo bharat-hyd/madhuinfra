@@ -1,10 +1,31 @@
 import awards_img from './assets/awards.svg'
 function Awards(){
+    const awards = [
+        {
+            name:"Trusted Developer in South India",
+            type:"",
+        },
+        {
+            name:"Sustainable Construction Champion",
+            type:"",
+        },
+        {
+            name:"Excellence in Urban Development",
+            type:"",
+        },
+        {
+            name:"Customer-Centric Real Estate Brand",
+            type:"",
+        },
+    ]
     return(
         <>
         <style>
             {
                 `
+                #awards{
+                    padding:60px 10px;
+                }
                 .awards-list{
                     display:flex;
                     flex-wrap:wrap;
@@ -44,30 +65,17 @@ function Awards(){
                 <h3 className="heading">Awards & Recognition</h3>
                 <p className="subheading">Merits we have earned</p>
                 <div className="awards-list">
+                    {awards.map((award, index) => (
                     <div className="awards-box">
                         <img src={awards_img} alt="" />
-                        <span className="awards-box-title">Excellence</span>
+                        <span className="awards-box-title">{award.name}</span>
                         <span className="awards-box-des">Excellence in Customer Service- PS GROUP</span>
                     </div>
-                    <div className="awards-box">
-                        <img src={awards_img} alt="" />
-                        <span className="awards-box-title">Excellence</span>
-                        <span className="awards-box-des">Excellence in Customer Service- PS GROUP</span>
-                    </div>
-                    <div className="awards-box">
-                        <img src={awards_img} alt="" />
-                        <span className="awards-box-title">Excellence</span>
-                        <span className="awards-box-des">Excellence in Customer Service- PS GROUP</span>
-                    </div>
-                    <div className="awards-box">
-                        <img src={awards_img} alt="" />
-                        <span className="awards-box-title">Excellence</span>
-                        <span className="awards-box-des">Excellence in Customer Service- PS GROUP</span>
-                    </div>
+                    ))}
                 </div>
-                    <div className='more'>
+                    {/* <div className='more'>
                         <a href="">SHOW ME MORE AWARDS </a>
-                    </div>
+                    </div> */}
             </div>
         </section>
         </>

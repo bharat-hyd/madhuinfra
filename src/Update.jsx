@@ -56,16 +56,39 @@ function Update(){
                     transform:translateX(15px);
                     z-index:1;
                 }
+                .button-box{
+                    display:flex;
+                    flex-wrap:wrap;
+                    justify-content:space-between;
+                    align-items:center;
+                    max-width:600px;
+                    margin:0 auto;
+                    margin-top:-20px;
+                }
+                .button-box button{
+                    padding:10px 30px;
+                    color:white;
+                    background:#f90;
+                    border:1px solid #f90;
+                    font-size:18px;
+                    position:relative;
+                    display:inline-block;
+                    cursor:pointer;
+                }
                 `
             }
         </style>
         <section id="update">
             <div className="container">
-                <h3 className="heading">Stay updated about Projects</h3>
-                <p className="subheading">Announcements, Launch information, Offers, etc.</p>
-                <div className="input-box">
+                <h3 className="heading"> Begin Your Home Story with Madhu Infra</h3>
+                <p className="subheading">We’re here to turn your dream into an address.</p>
+                {/* <div className="input-box">
                     <input type="text" placeholder="Enter your email to subscribe to the newsletter"/>
                     <button>Subscribe</button>
+                </div> */}
+                <div className="button-box">
+                    <button>Get in Touch</button>
+                    <button>Contact Us</button>
                 </div>
             </div>
         </section>

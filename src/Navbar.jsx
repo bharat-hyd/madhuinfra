@@ -25,7 +25,7 @@ const toggleMenu = () => {
     setMenu(prev => !prev);
 }
 
-    const hero_h1 = ["Fun","Quality","Family"]
+    const hero_h1 = ["Dreams","Trust","Legacies"]
     const [hIndex,setHIndex] = useState(0)
     useEffect(() => {
         const timer = setInterval(() => {
@@ -294,6 +294,11 @@ const toggleMenu = () => {
                 .hero-overlay .num{
                     color:#f90;
                 }
+                .hero-overlay .from-num{
+                        color: #35ff0a;
+                        font-weight: bold;
+                        line-height: 1.8;
+                }
                 .hero-overlay p{
                     font-size:20px;
                     line-height:1.1;
@@ -410,14 +415,15 @@ const toggleMenu = () => {
 				<source src="https://psgroup.in/assets/media/home-video.mp4" type="video/mp4" />
 			</video>
             <div className='hero-overlay'>
-                <h1>Its 
+                <h1>Building 
                       {" "}<span className="hero_change_wrapper">
                         <span key={hIndex} className="hero_change">
                         {hero_h1[hIndex]}
                         </span>
                     </span>{" "}
-                     Time</h1>
-                <p><span className='num'>15000+</span>  Happy Families</p>
+                     </h1>
+                <p><span className='from-num'>Since 2004</span></p>
+                <p><span className='num'>20+</span> years of <span className='num'>Building Trust</span> and <span className='num'>Legacy</span></p>
             </div>
             <div className='hero-overlay-btn'>
                 <span className='btn-box'><span className='btn-line'></span></span>

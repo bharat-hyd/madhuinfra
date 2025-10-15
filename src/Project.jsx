@@ -4,27 +4,43 @@ import project_2 from './assets/project_2.png'
 function Project(){
     const projects = [
         {
-            title:"PS Logistics Park",
-            subtitle:"Kona Expressway",
+            title:"Parkville",
+            subtitle:"Tellapur, Hyderabad",
             price:"3.59 Cr onwards",
-            para:"Amidst the cacophony of life, there is a serene Grove. A Grove of Jade that’s rooted deep. That holds a community together. A Grove that connects you with your own world. Where all the like-minded people coexist. It’s time you discover this rarity at the heart of your city and inhabit a space acclaimed by your close ones.",
-            url:"ps-logistics-park",
+            para:"Welcome to a place where everyday life feels effortless. Parkville brings you spacious homes filled with natural light, surrounded by open spaces where families grow and children explore freely. Perfectly located between Hitech City and Gachibowli, it’s a community designed for comfort, connection, and meaningful living.",
+            url:"parkville",
             img:project_1,
         },
         {
-            title:"PS Logistics 2",
-            subtitle:"Kona Expressway 2",
+            title:"Lakshmi Nilayam",
+            subtitle:"Syamala Nagar, Guntur",
             price:"3.59 Cr onwards 2",
-            para:"2 Amidst the cacophony of life, there is a serene Grove. A Grove of Jade that’s rooted deep. That holds a community together. A Grove that connects you with your own world. Where all the like-minded people coexist. It’s time you discover this rarity at the heart of your city and inhabit a space acclaimed by your close ones.",
-            url:"2 ps-logistics-park",
+            para:"Lakshmi Nilayam is where warmth and belonging come naturally. Ready-to-move homes offer the joy of settling in instantly, surrounded by a welcoming neighbourhood and everyday conveniences. It’s more than just a place to stay it’s where family stories begin.",
+            url:"lakshmi-nilayam",
             img:project_2,
         },
         {
-            title:"PS Logistics 3",
-            subtitle:"Kona Expressway 2",
+            title:"Lakshmi Mayflower",
+            subtitle:"Gorantla, Guntur",
             price:"3.59 Cr onwards 2",
-            para:"2 Amidst the cacophony of life, there is a serene Grove. A Grove of Jade that’s rooted deep. That holds a community together. A Grove that connects you with your own world. Where all the like-minded people coexist. It’s time you discover this rarity at the heart of your city and inhabit a space acclaimed by your close ones.",
-            url:"2 ps-logistics-park",
+            para:"Life flows gently at Lakshmi Mayflower, a peaceful residential enclave close to Amaravati. Thoughtfully designed homes and serene surroundings create a calm, balanced lifestyle. It’s a place where you can slow down, feel at home, and build a future with ease.", 
+            url:"lakshmi-mayflower",
+            img:project_2,
+        },
+        {
+            title:"Park Ridge",
+            subtitle:"Langer Houz, Hyderabad",
+            price:"3.59 Cr onwards 2",
+            para:"Park Ridge is where city living meets everyday comfort. With beautiful views of Golconda Fort, green landscapes, and a friendly community, it offers a perfect blend of peace and connectivity.",
+            url:"park-ridge",
+            img:project_2,
+        },
+        {
+            title:"APHMHIDC",
+            subtitle:"partnership with AP Govt.",
+            price:"3.59 Cr onwards 2",
+            para:"Madhu Infra is proud to partner with APHMHIDC, a flagship government initiative focused on building modern healthcare facilities, staff housing, and essential infrastructure across Andhra Pradesh, ensuring quality healthcare reaches every community.",
+            url:"aphmhidc",
             img:project_2,
         },
     ]
@@ -241,8 +257,8 @@ function Project(){
         </style>
            <section id="project">
                 <div className="container">
-                    <h3 className="heading showAnimation">Featured Projects</h3>
-                    <p className="subheading">Building dreams since 1985</p>
+                    <h3 className="heading showAnimation">Explore Our Projects</h3>
+                    <p className="subheading">Ongoing Projects</p>
                     <div className="project-list">
                         {projects.map((project, index) => (
                             <div className="project-box" key={index} style={{ transform:`translateX(-${projectIndex * projectSlideWidth}%)`,transition: 'transform 0.8s ease'}}>
@@ -251,7 +267,7 @@ function Project(){
                                     <div className="overlay-project">
                                         <div className="overlay-head">
                                             <span>{project.title} </span>
-                                            <span>Kona Expressway</span>
+                                            <span>{project.subtitle}</span>
                                         </div>
                                         <div className="overlay-subhead">
                                             3.59 Cr onwards
@@ -260,8 +276,8 @@ function Project(){
                                 </div>
                                 <div className="box-right">
                                     <div className='box-right-text'>
-                                        <p>Amidst the cacophony of life, there is a serene Grove. A Grove of Jade that’s rooted deep. That holds a community together. A Grove that connects you with your own world. Where all the like-minded people coexist. It’s time you discover this rarity at the heart of your city and inhabit a space acclaimed by your close ones.</p>
-                                        <a href="">Visit Project</a>
+                                        <p>{project.para}</p>
+                                        <a href="">Visit Details</a>
                                     </div>
                                 </div>
                             </div>

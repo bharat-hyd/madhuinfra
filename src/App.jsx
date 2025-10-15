@@ -11,6 +11,8 @@ import Hero from './Hero'
 import Footer from './Footer'
 import Navbar from './Navbar'
 import Review from './Review'
+import FounderMsg from './FounderMsg'
+import About from './About'
 
 function App() {
 
@@ -19,10 +21,12 @@ function App() {
       <Navbar />
       {/* <Hero /> */}
       <Project />
-      <Journey />
+      {/* <Journey /> */}
+      <About />
       <Awards />
+      <FounderMsg />
       <Review />
-      <Blog />
+      {/* <Blog /> */}
       <Update />
       <Footer />
     </>
