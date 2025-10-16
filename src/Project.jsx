@@ -1,6 +1,10 @@
 import { useEffect, useState } from 'react'
-import project_1 from './assets/project_1.jpg'
-import project_2 from './assets/project_2.png'
+import project_1 from './assets/park-ville.jpg'
+import project_2 from './assets/lakshmi-nilayam.jpg'
+import project_3 from './assets/lakshmi-nivas.jpg'
+import project_4 from './assets/madhu-park-ridge.jpg'
+import project_5 from './assets/APHMHIDC.jpg'
+import { Link as ScrollLink } from 'react-scroll'
 function Project(){
     const projects = [
         {
@@ -25,7 +29,7 @@ function Project(){
             price:"3.59 Cr onwards 2",
             para:"Life flows gently at Lakshmi Mayflower, a peaceful residential enclave close to Amaravati. Thoughtfully designed homes and serene surroundings create a calm, balanced lifestyle. It’s a place where you can slow down, feel at home, and build a future with ease.", 
             url:"lakshmi-mayflower",
-            img:project_2,
+            img:project_3,
         },
         {
             title:"Park Ridge",
@@ -33,7 +37,7 @@ function Project(){
             price:"3.59 Cr onwards 2",
             para:"Park Ridge is where city living meets everyday comfort. With beautiful views of Golconda Fort, green landscapes, and a friendly community, it offers a perfect blend of peace and connectivity.",
             url:"park-ridge",
-            img:project_2,
+            img:project_4,
         },
         {
             title:"APHMHIDC",
@@ -41,7 +45,7 @@ function Project(){
             price:"3.59 Cr onwards 2",
             para:"Madhu Infra is proud to partner with APHMHIDC, a flagship government initiative focused on building modern healthcare facilities, staff housing, and essential infrastructure across Andhra Pradesh, ensuring quality healthcare reaches every community.",
             url:"aphmhidc",
-            img:project_2,
+            img:project_5,
         },
     ]
     const [projectIndex, setProjectIndex] = useState(0)
@@ -149,10 +153,14 @@ function Project(){
                         bottom:20px;
                         left:55%;
                     }
-                    .overlay-project-number a{
+                    .overlay-project-number span{
                         padding:10px 12px;
                         color:#999;
                         font-size:15px;
+                        cursor:pointer;
+                    }
+                    .overlay-project-number span.active{
+                        color:#f90;
                     }
 
                     .more {
@@ -263,7 +271,7 @@ function Project(){
                         {projects.map((project, index) => (
                             <div className="project-box" key={index} style={{ transform:`translateX(-${projectIndex * projectSlideWidth}%)`,transition: 'transform 0.8s ease'}}>
                                 <div className="box-left">
-                                    <img src={project_1} alt="" />
+                                    <img src={project.img} alt="" />
                                     <div className="overlay-project">
                                         <div className="overlay-head">
                                             <span>{project.title} </span>
@@ -277,17 +285,17 @@ function Project(){
                                 <div className="box-right">
                                     <div className='box-right-text'>
                                         <p>{project.para}</p>
-                                        <a href="">Visit Details</a>
+                                        <ScrollLink to="project">
+                                            Visit Details
+                                        </ScrollLink>
                                     </div>
                                 </div>
                             </div>
                         ))}
                         <div className='overlay-project-number'>
-                            <a href="">1</a>
-                            <a href="">2</a>
-                            <a href="">3</a>
-                            <a href="">4</a>
-                            <a href="">5</a>
+                            {projects.map((project,index) => (
+                                <span href="" key={index} className={index === projectIndex ? 'active' : ''} onClick={() => setProjectIndex(index)}>{index + 1}</span>
+                            ))}
                         </div>
                     </div>
                     <div className='more'>

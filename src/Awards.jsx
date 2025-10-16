@@ -1,4 +1,4 @@
-import awards_img from './assets/awards.svg'
+import awards_img from './assets/award.jpg'
 function Awards(){
     const awards = [
         {

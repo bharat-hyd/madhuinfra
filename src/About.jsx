@@ -1,3 +1,5 @@
+import { Link as ScrollLink } from "react-scroll";
+
 function About(){
     const impacts = [
         {
@@ -98,6 +100,15 @@ function About(){
                     line-height:1.5;
                     color:#f90;
                 }
+                @media(max-width:768px){
+                
+                .about-left{
+                    flex:0 0 100%;
+                }
+                .about-right{
+                    flex:0 0 100%;
+                }
+                }
                 `
             }
         </style>
@@ -109,7 +120,7 @@ function About(){
                     <div className="about-left">
                         <h3>Building Trust and Turning Dreams into Homes.</h3>
                         <p>Madhu Infrastructure is a team of professionals committed to a single principle:that everyone deserves a safe,well-maintained and affordable place to call home. Operating as an ethical and integrated developer in South India, we approach every project with meticulous care,focusing on the people who will live there.Our work is guided by integrity and the belief that by maintaining the highest standards in construction, we are actively contributing to the development of vibrant, stable communities for the future.</p>
-                        <a href="">Know more</a>
+                        <ScrollLink to="project" smooth={true} duration={500} offset={-60}>Know more</ScrollLink>
                     </div>
                     <div className="about-right">
                         <div className="about-right-list">

@@ -1,4 +1,4 @@
-import founder from './assets/blog_2.jpg'
+import founder from './assets/founder.jpg'
 
 function FounderMsg(){
     return (
@@ -54,6 +54,16 @@ function FounderMsg(){
                     color:white;
                     display:block;
                     line-height:1.5;
+                }
+                @media(max-width:768px){
+                
+                .FounderMsg-left{
+                    flex:0 0 100%;
+                }
+                
+                .FounderMsg-right{
+                    flex:0 0 100%;
+                }
                 }
                 `
             }

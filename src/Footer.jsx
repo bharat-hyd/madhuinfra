@@ -1,4 +1,4 @@
-import { FaFacebook, FaLinkedin, FaYoutube, FaInstagram } from "react-icons/fa";
+import { FaFacebook, FaLinkedin, FaYoutube, FaInstagram, FaTwitter } from "react-icons/fa";
 function Footer(){
     return (
         <>
@@ -88,10 +88,11 @@ function Footer(){
                         <div className="footer-box">
                             <span className="footer-box-title">SOCIAL</span>
                             <span className="footer-box-value">
-                                <a href="mailto:sales@psgroup.in"><FaFacebook /></a>
-                                <a href="mailto:sales@psgroup.in"><FaLinkedin /></a>
-                                <a href="mailto:sales@psgroup.in"><FaYoutube /></a>
-                                <a href="mailto:sales@psgroup.in"><FaInstagram /></a>
+                                <a href="https://www.facebook.com/Madhuinfra"><FaFacebook /></a>
+                                <a href="https://x.com/MadhuInfra"><FaTwitter /></a>
+                                <a href="https://www.linkedin.com/company/madhuinfra/"><FaLinkedin /></a>
+                                <a href="https://www.youtube.com/@Madhuinfra"><FaYoutube /></a>
+                                <a href="https://www.instagram.com/madhu.infra/"><FaInstagram /></a>
                                 </span>
                         </div>
                     </div>
@@ -100,12 +101,12 @@ function Footer(){
             <div className="footer-part-2">
                 <div className="container">
                     <ul>
-                        <li><a href="">Disclaimer</a></li>
-                        <li><a href="">Privacy Policy </a></li>
-                        <li><a href="">Terms of use</a></li>
-                        <li><a href="">Contact</a></li>
-                        <li><a href="">ESG</a></li>
-                        <li><a href="javascript:void(0)" className="color">2024 PS Group</a></li>
+                        <li><a href="javascript:void(0)">Disclaimer</a></li>
+                        <li><a href="javascript:void(0)">Privacy Policy </a></li>
+                        <li><a href="javascript:void(0)">Terms of use</a></li>
+                        <li><a href="javascript:void(0)">Contact</a></li>
+                        <li><a href="javascript:void(0)">ESG</a></li>
+                        <li><a href="javascript:void(0)" className="color">2024 MadhuIfra</a></li>
                     </ul>
                 </div>
             </div>

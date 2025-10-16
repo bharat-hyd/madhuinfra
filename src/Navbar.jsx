@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
-import logo from './assets/web-logo.svg'
+import logo from './assets/logo.jpg'
+import { Link as ScrollLink } from 'react-scroll';
 
 function Navbar(){
     const [scroll, setScroll] = useState(false)
@@ -99,15 +100,14 @@ const toggleMenu = () => {
                 <div className="nav-list">
                     <img src={logo} className='logo'/>
                     <ul className='menu'>
-                        <li><a href="">Projects</a></li>
-                        <li><a href="">Foundation</a></li>
-                        <li><a href="">Careers</a></li>
-                        <li><a href="">Blog</a></li>
-                        <li><a href="">Faq</a></li>
+                        <li><ScrollLink to="project" smooth={true} duration={500} offset={-50}>Projects</ScrollLink></li>
+                        <li><ScrollLink to="about" smooth={true} duration={500} offset={-50}>About Us</ScrollLink></li>
+                        <li><ScrollLink to="awards" smooth={true} duration={500} offset={-50}>Awards</ScrollLink></li>
+                        <li><ScrollLink to="review" smooth={true} duration={500} offset={-50}>Reviews</ScrollLink></li>
                     </ul>
                     <ul className='menu-button'>
-                        <li><a href="">Enquiry</a></li>
-                        <li><a href="">WhatsApp</a></li>
+                        <li><ScrollLink to="footer" smooth={true} duration={700} offset={-50}>Contact</ScrollLink></li>
+                        <li><a href="https://wa.me/913367676700">WhatsApp</a></li>
                     </ul>
                 </div>
             </div>
@@ -155,6 +155,9 @@ const toggleMenu = () => {
                     border-radius: 2px;
                     transition: all 0.3s ease;
                     transition-origin:center;
+                }
+                .humburg.active span {
+                    background: #35ff0a;
                 }
 
                 .humburg.open span:nth-child(1){ 
@@ -222,10 +225,10 @@ const toggleMenu = () => {
                 `
             }
         </style>
-        <section id="mobile-nav">
+        <section id="mobile-nav" className={scroll ? 'scrolled' : ''}>
             <div className={`mobile-head ${menu ? 'active' : ''}`}>
                 <img src={logo} className='logo'/>
-                <div className={`humburg ${menu ? 'open' : ''}`} onClick={toggleMenu}>
+                <div className={`humburg ${menu ? 'open' : ''} ${scroll ? 'active' : ''}`} onClick={toggleMenu}>
                     <span></span>
                     <span></span>
                     <span></span>
@@ -235,15 +238,15 @@ const toggleMenu = () => {
             <>
                 <div className='mobile-menu'>
                     <ul className='mobile-menu-list'>
-                        <li><a href="">Projects</a></li>
-                        <li><a href="">Foundation</a></li>
-                        <li><a href="">Careers</a></li>
-                        <li><a href="">Blog</a></li>
-                        <li><a href="">Faq</a></li>
+                        <li><ScrollLink to="project" smooth={true} duration={500} offset={-50} onClick={toggleMenu}>Projects</ScrollLink></li>
+                        <li><ScrollLink to="about" smooth={true} duration={500} offset={-50} onClick={toggleMenu}>About Us</ScrollLink></li>
+                        <li><ScrollLink to="awards" smooth={true} duration={500} offset={-50} onClick={toggleMenu}>Awards</ScrollLink></li>
+                        <li><ScrollLink to="review" smooth={true} duration={500} offset={-50} onClick={toggleMenu}>Reviews</ScrollLink></li>
                     </ul>
                     <ul className='mobile-menu-button-list'>
-                        <li><a href="">Enquiry</a></li>
-                        <li><a href="">WhatsApp</a></li>
+
+                        <li><ScrollLink to="footer" smooth={true} duration={700} offset={-50}  onClick={toggleMenu}>Contact</ScrollLink></li>
+                        <li><a href="https://wa.me/913367676700">WhatsApp</a></li>
                     </ul>
                 </div>
                 <div className='nav-overlay'></div>

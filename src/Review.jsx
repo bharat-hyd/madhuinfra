@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
-import img_1 from './assets/review_img_1.jpg';
-import img_2 from './assets/review_img_2.jpg';
-import img_3 from './assets/review_img_3.jpg';
-import img_4 from './assets/review_img_4.jpg';
+import img_1 from './assets/deepak.jpg';
+import img_2 from './assets/karthik.jpg';
+import img_3 from './assets/sudheer.jpg';
+import img_4 from './assets/shyam.jpg';
 
 function Review() {
   const reviews = [

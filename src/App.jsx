@@ -13,22 +13,31 @@ import Navbar from './Navbar'
 import Review from './Review'
 import FounderMsg from './FounderMsg'
 import About from './About'
+import { BrowserRouter, Route, Router, Routes } from 'react-router-dom'
 
 function App() {
 
   return (
     <>
-      <Navbar />
-      {/* <Hero /> */}
-      <Project />
-      {/* <Journey /> */}
-      <About />
-      <Awards />
-      <FounderMsg />
-      <Review />
-      {/* <Blog /> */}
-      <Update />
-      <Footer />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={
+          <>
+            <Navbar />
+            {/* <Hero /> */}
+            <Project />
+            {/* <Journey /> */}
+            <About />
+            <Awards />
+            <FounderMsg />
+            <Review />
+            {/* <Blog /> */}
+            <Update />
+            <Footer />
+          </>
+        } /> 
+      </Routes>
+    </BrowserRouter>
     </>
   )
 }
