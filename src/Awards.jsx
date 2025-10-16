@@ -69,7 +69,7 @@ function Awards(){
                     <div className="awards-box">
                         <img src={awards_img} alt="" />
                         <span className="awards-box-title">{award.name}</span>
-                        <span className="awards-box-des">Excellence in Customer Service- PS GROUP</span>
+                        {/* <span className="awards-box-des">Excellence in Customer Service- PS GROUP</span> */}
                     </div>
                     ))}
                 </div>

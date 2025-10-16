@@ -277,9 +277,9 @@ function Project(){
                                             <span>{project.title} </span>
                                             <span>{project.subtitle}</span>
                                         </div>
-                                        <div className="overlay-subhead">
+                                        {/* <div className="overlay-subhead">
                                             3.59 Cr onwards
-                                        </div>
+                                        </div> */}
                                     </div>
                                 </div>
                                 <div className="box-right">
