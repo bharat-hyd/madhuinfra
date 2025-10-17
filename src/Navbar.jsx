@@ -415,7 +415,7 @@ const toggleMenu = () => {
         </style>
         <section id="hero">
             <video autoPlay muted loop playsInline className="main-video">
-				<source src="/main.mp4" type="video/mp4" />
+				<source src="https://eteamworks.com/main.mp4" type="video/mp4" />
 			</video>
             <div className='hero-overlay'>
                 <h1>Building 
