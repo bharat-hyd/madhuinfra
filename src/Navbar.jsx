@@ -107,7 +107,7 @@ const toggleMenu = () => {
                     </ul>
                     <ul className='menu-button'>
                         <li><ScrollLink to="footer" smooth={true} duration={700} offset={-50}>Contact</ScrollLink></li>
-                        <li><a href="https://wa.me/913367676700">WhatsApp</a></li>
+                        <li><a href="https://wa.me/919347513367">WhatsApp</a></li>
                     </ul>
                 </div>
             </div>
@@ -246,7 +246,7 @@ const toggleMenu = () => {
                     <ul className='mobile-menu-button-list'>
 
                         <li><ScrollLink to="footer" smooth={true} duration={700} offset={-50}  onClick={toggleMenu}>Contact</ScrollLink></li>
-                        <li><a href="https://wa.me/913367676700">WhatsApp</a></li>
+                        <li><a href="https://wa.me/919347513367">WhatsApp</a></li>
                     </ul>
                 </div>
                 <div className='nav-overlay'></div>

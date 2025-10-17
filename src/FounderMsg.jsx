@@ -77,8 +77,8 @@ function FounderMsg(){
                     <div className="FounderMsg-right">
                         <h3 className='heading'>Founders message </h3>
                         <p>When I found Madhu Infra, my vision was never limited to constructing buildings.It was about creating spaces where lives could flourish and communities could thrive. My journey from healthcare to real estate has always been driven by one belief: that the environments we build have the power to shape futures, nurture relationships, and inspire generations.</p>
-                        <span className="FounderMsg-name">Dr. C.N. Srinivas</span>
-                        <span className="FounderMsg-post">Promoter</span>
+                        <span className="FounderMsg-name">Mr. Vasu</span>
+                        <span className="FounderMsg-post">Founder</span>
                     </div>
                 </div>
             </div>

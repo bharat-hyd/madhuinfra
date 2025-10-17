@@ -79,11 +79,11 @@ function Footer(){
                     <div className="footer-list">
                         <div className="footer-box">
                             <span className="footer-box-title">Mail</span>
-                            <span className="footer-box-value"><a href="mailto:sales@psgroup.in">sales@psgroup.in</a></span>
+                            <span className="footer-box-value"><a href="mailto:sales@madhuinfra.in">sales@madhuinfra.in</a></span>
                         </div>
                         <div className="footer-box">
                             <span className="footer-box-title">Call</span>
-                            <span className="footer-box-value"><a href="tel:+913367676700">+91 33 6767 6700</a></span>
+                            <span className="footer-box-value"><a href="tel:+919347513367">+91 9347513367</a></span>
                         </div>
                         <div className="footer-box">
                             <span className="footer-box-title">SOCIAL</span>
