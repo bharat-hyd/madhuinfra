@@ -266,7 +266,7 @@ function Project(){
            <section id="project">
                 <div className="container">
                     <h3 className="heading showAnimation">Explore Our Projects</h3>
-                    <p className="subheading">Ongoing Projects</p>
+                    {/* <p className="subheading">Ongoing Projects</p> */}
                     <div className="project-list">
                         {projects.map((project, index) => (
                             <div className="project-box" key={index} style={{ transform:`translateX(-${projectIndex * projectSlideWidth}%)`,transition: 'transform 0.8s ease'}}>

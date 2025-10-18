@@ -115,7 +115,7 @@ function About(){
         <section id="about">
             <div className="container">
                 <h3 className="heading">Who we are</h3>
-                <p className="subheading">Merits we have earned</p>
+                <p className="subheading">A Sneak peek of our journey</p>
                 <div className="about-block">
                     <div className="about-left">
                         <h3>Building Trust and Turning Dreams into Homes.</h3>

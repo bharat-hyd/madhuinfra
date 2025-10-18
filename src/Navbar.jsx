@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
-import logo from './assets/logo.jpg'
+import logo from './assets/logo.png'
+import success from './assets/success.png'
 import { Link as ScrollLink } from 'react-scroll';
 
 function Navbar(){
@@ -277,7 +278,7 @@ const toggleMenu = () => {
                 }
                 .hero-overlay{
                     position:absolute;
-                    top:45%;
+                    top:48%;
                     left:50%;
                     transform:translate(-50%,-50%);
                     z-index:2;
@@ -301,6 +302,11 @@ const toggleMenu = () => {
                         color: #35ff0a;
                         font-weight: bold;
                         line-height: 1.8;
+                }
+                .hero-overlay img{
+                    max-width:170px;
+                    display:block;
+                    margin:0 auto;
                 }
                 .hero-overlay p{
                     font-size:20px;
@@ -405,6 +411,12 @@ const toggleMenu = () => {
                     .hero-overlay h1 {
                         font-size: 30px;
                     }
+                        
+                    .hero-overlay img{
+                        width:120px;
+                        display:block;
+                        margin:0 auto;
+                    }
                     .hero-overlay p {
                         font-size: 18px;
                         line-height: 1.8;
@@ -418,6 +430,7 @@ const toggleMenu = () => {
 				<source src="https://eteamworks.com/main.mp4" type="video/mp4" />
 			</video>
             <div className='hero-overlay'>
+                <img src={success} alt="" />
                 <h1>Building 
                       {" "}<span className="hero_change_wrapper">
                         <span key={hIndex} className="hero_change">
@@ -425,8 +438,8 @@ const toggleMenu = () => {
                         </span>
                     </span>{" "}
                      </h1>
-                <p><span className='from-num'>Since 2004</span></p>
-                <p><span className='num'>20+</span> years of <span className='num'>Building Trust</span> and <span className='num'>Legacy</span></p>
+                {/* <p><span className='from-num'>Since 2004</span></p> */}
+                {/* <p><span className='num'>20+</span> years of <span className='num'>Building Trust</span> and <span className='num'>Legacy</span></p> */}
             </div>
             <div className='hero-overlay-btn'>
                 <span className='btn-box'><span className='btn-line'></span></span>

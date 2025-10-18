@@ -14,6 +14,7 @@ import Review from './Review'
 import FounderMsg from './FounderMsg'
 import About from './About'
 import { BrowserRouter, Route, Router, Routes } from 'react-router-dom'
+import Fact from './Fact'
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
             <Project />
             {/* <Journey /> */}
             <About />
+            {/* <Fact /> */}
             <Awards />
             <FounderMsg />
             <Review />
