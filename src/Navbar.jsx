@@ -59,7 +59,7 @@ const toggleMenu = () => {
                     list-style:none;
                 }
                 nav .logo{
-                    width:150px;
+                    width:60px;
                 }
                 nav li{
                     display:inline-block;
@@ -136,7 +136,7 @@ const toggleMenu = () => {
                     border-bottom:1px solid #a8c6eb;
                 }
                 .mobile-head .logo {
-                    width:120px;
+                    width:50px;
                 }
                 .humburg {
                     width: 45px;
