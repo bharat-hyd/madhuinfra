@@ -3,7 +3,7 @@ import { Link as ScrollLink } from "react-scroll";
 function About(){
     const impacts = [
         {
-            num:"🏗️ 86+",
+            num:"🏗️ 10+",
             title:"Completed Projects",
         },
         {
@@ -11,21 +11,21 @@ function About(){
             title:"Cities",
         },
         {
-            num:"🥇 200+",
-            title:"Awards & Recognitions ",
+            num:"🏆 2",
+            title:"Decades of Expertise",
         },
         {
             num:"😊 2,000,000+",
-            title:"Happy Customers",
+            title:"Happy families",
         },
-        {
-            num:"🏆 2",
-            title:"Decades of Experience",
-        },
-        {
-            num:"🏗️ 10+",
-            title:"Green Buildings",
-        },
+        // {
+        //     num:"🥇 200+",
+        //     title:"Awards & Recognitions ",
+        // },
+        // {
+        //     num:"🏗️ 10+",
+        //     title:"Green Buildings",
+        // },
     ]
     return (
         <>
@@ -35,6 +35,7 @@ function About(){
                 #about{
                     background:#22438a;
                     padding:60px 10px;
+                    border-bottom:1px solid white;
                 }
                  #about .heading{
                  color:white;
@@ -75,6 +76,10 @@ function About(){
                     flex:0 0 50%;
                     padding:30px 10px;
                     box-sizing:border-box;
+                    display:flex;
+                    flex-wrap:wrap;
+                    justify-content:center;
+                    align-items:center;
                 }
                 .about-right-list{
                     display:flex;
@@ -83,9 +88,8 @@ function About(){
                 .about-right-box{
                     flex:0 0 45%;
                     margin:0 auto;
-                    padding:10px;
                     text-align:left;
-                    padding:20px 20px;
+                    padding:25px 20px;
                     box-sizing:border-box;
                 }
                 .about-right-num{
@@ -115,7 +119,7 @@ function About(){
         <section id="about">
             <div className="container">
                 <h3 className="heading">Who we are</h3>
-                <p className="subheading">A Sneak peek of our journey</p>
+                <p className="subheading">A sneak peek of our journey</p>
                 <div className="about-block">
                     <div className="about-left">
                         <h3>Building Trust and Turning Dreams into Homes.</h3>

@@ -30,7 +30,7 @@ function App() {
             {/* <Journey /> */}
             <About />
             {/* <Fact /> */}
-            <Awards />
+            {/* <Awards /> */}
             <FounderMsg />
             <Review />
             {/* <Blog /> */}

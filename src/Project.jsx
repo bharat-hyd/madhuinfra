@@ -38,15 +38,7 @@ function Project(){
             para:"Park Ridge is where city living meets everyday comfort. With beautiful views of Golconda Fort, green landscapes, and a friendly community, it offers a perfect blend of peace and connectivity.",
             url:"park-ridge",
             img:project_4,
-        },
-        {
-            title:"APHMHIDC",
-            subtitle:"partnership with AP Govt.",
-            price:"3.59 Cr onwards 2",
-            para:"Madhu Infra is proud to partner with APHMHIDC, a flagship government initiative focused on building modern healthcare facilities, staff housing, and essential infrastructure across Andhra Pradesh, ensuring quality healthcare reaches every community.",
-            url:"aphmhidc",
-            img:project_5,
-        },
+        }
     ]
     const [projectIndex, setProjectIndex] = useState(0)
     const visibleProject = 1
@@ -65,8 +57,6 @@ function Project(){
                     #project{
                         background:white;
                         padding:80px 0px;
-
-
                     }
                     .project-list{
                         display:flex;

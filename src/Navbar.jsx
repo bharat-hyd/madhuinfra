@@ -27,7 +27,7 @@ const toggleMenu = () => {
     setMenu(prev => !prev);
 }
 
-    const hero_h1 = ["Dreams","Trust","Legacies"]
+    const hero_h1 = ["Dreams","Trust","Legacy"]
     const [hIndex,setHIndex] = useState(0)
     useEffect(() => {
         const timer = setInterval(() => {
