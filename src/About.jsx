@@ -15,7 +15,7 @@ function About(){
             title:"Decades of Expertise",
         },
         {
-            num:"😊 2,000,000+",
+            num:"😊 2000+",
             title:"Happy families",
         },
         // {
