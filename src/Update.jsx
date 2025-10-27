@@ -1,5 +1,8 @@
 import overlay_img from './assets/overlay-img.png'
+import { useModal } from './context/ModalContext';
 function Update(){
+    
+    const { openModal} = useModal()
     return (
         <>
         <style>
@@ -87,8 +90,8 @@ function Update(){
                     <button>Subscribe</button>
                 </div> */}
                 <div className="button-box">
-                    <button>Get in Touch</button>
-                    <button>Contact Us</button>
+                    <button onClick={openModal}>Get in Touch</button>
+                    <button onClick={openModal}>Contact Us</button>
                 </div>
             </div>
         </section>

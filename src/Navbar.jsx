@@ -2,8 +2,10 @@ import { useEffect, useState } from 'react';
 import logo from './assets/logo.png'
 import success from './assets/success.png'
 import { Link as ScrollLink } from 'react-scroll';
+import { useModal } from './context/ModalContext';
 
 function Navbar(){
+    const { openModal } = useModal();
     const [scroll, setScroll] = useState(false)
 
     useEffect(() => {
@@ -75,6 +77,12 @@ const toggleMenu = () => {
                     margin-right:20px;
                     color:#22438a;
                 }
+                .menu-button li span{
+                    background:white;
+                    padding:10px 25px;
+                    margin-right:20px;
+                    color:#22438a;
+                }
                 
                 .scrolled {
                     background:white;
@@ -107,7 +115,8 @@ const toggleMenu = () => {
                         <li><ScrollLink to="review" smooth={true} duration={500} offset={-50}>Reviews</ScrollLink></li>
                     </ul>
                     <ul className='menu-button'>
-                        <li><ScrollLink to="footer" smooth={true} duration={700} offset={-50}>Contact</ScrollLink></li>
+                        {/* <li><span onClick={openModal}>Contact</span></li> */}
+                        <li><span>Contact</span></li>
                         <li><a href="https://wa.me/919347513367">WhatsApp</a></li>
                     </ul>
                 </div>
